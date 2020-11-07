@@ -1,0 +1,680 @@
+/* RESET Default CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* --------------------------------- */
+
+
+
+
+/* Fonts */
+
+@font-face { 
+    font-family: "Regular"; 
+    src: url('../fonts/Roboto-Regular.ttf'); 
+}
+
+@font-face { 
+    font-family: "Radjhani-Bold"; 
+    src: url('../fonts/RussoOne-Regular.ttf'); 
+} 
+
+/* --------------------------------- */
+
+/* Global */
+
+h1 {
+    font-size: 36px;
+    font-family: "Radjhani-Bold";
+    margin-bottom: 15px;
+    color: #072B4C;
+}
+
+h2 {
+    font-family: "Radjhani-Bold";
+    color: #072B4C;
+}
+
+p {
+    font-family: "Regular";
+    font-size: 15px;
+    line-height: 1.667;
+    margin-bottom: 20px;
+}
+
+.btn_style1 {
+    padding: 15px 25px;
+    display: inline-block;
+    color: #1890ff;
+    background-color: white;
+    border-radius: 20px;
+    font-family: "Radjhani-Bold"; 
+    border: solid 2px white;
+    transition: all 300ms;
+}
+
+.btn_style1:hover {
+    background-color: transparent;
+    color: white
+}
+
+
+.btn_style2 {
+    padding: 15px 25px;
+    display: inline-block;
+    color: #3a414e;
+    background-color: transparent;
+    border-radius: 20px;
+    font-family: "Regular";
+    border: solid 1px #1890ff;
+    transition: all 300ms;
+    font-family: "Radjhani-Bold"; 
+}
+
+.btn_style2:hover {
+    background-color: #1890ff;
+    color: white;
+}
+
+.max-width {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    .heading {
+        max-width: 50%;
+        margin: auto;
+    }
+}
+
+/* --------------------------------- */
+
+/* Header */
+header {
+    background-color: transparent;
+    color: white;
+    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition: linear 300ms;
+}
+
+header.active {
+    background-color: #1890ff;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    padding: 20px 25px;
+    max-width: 1200px;
+    position: relative;
+}
+
+header .logo_holder {
+    font-size: 26px;
+    font-family: "Radjhani-Bold";
+}
+
+header .des_menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .des_menu li {
+    margin-left: 35px;
+    font-family: "Regular";
+    font-size: 16px;
+}
+
+header .mob_act_btn {
+    font-size: 26px;
+    color: white;
+    transition: color 300ms;
+}
+
+header .mob_act_btn:hover {
+    color: #1783e9;
+}
+
+header .des_menu,
+header .mob_menu {
+    display: none;
+}
+
+header .mob_menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 68px;
+    background-color: #1890ff;
+    text-align: center;
+    border-top: 1px solid #1783e9;
+    border-bottom: 5px solid #1783e9;
+}
+
+header .mob_menu a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: solid 1px #1783e9;
+    font-family: "Regular";
+    font-size: 15px;
+    transition: all 300ms;
+}
+
+header .mob_menu a:hover {
+    background-color: #1783e9;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        background-color: transparent;
+    }
+
+    header .mob_act_btn {
+        display: none;
+    }
+
+    header .des_menu{
+        display: block;
+    }
+}
+
+/* --------------------------------- */
+
+/* Slider */
+
+section.slider {
+    padding: 120px 25px;
+    background-color: #1890ff;
+    color: white;
+}
+
+section.slider .btn_style1 {
+    margin-top: 20px;
+}
+
+section.slider .img_holder {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+section.slider .img_holder img {
+    width: 100%;
+}
+
+section.slider h1 {
+    font-size: 23px;
+    color: white;
+}
+
+section.slider .bg_image {
+    background-image: url(../img/banner-bg.png);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    section.slider {
+        padding: 0;
+    }
+
+    section.slider .container {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        position: relative;
+        z-index: 4;
+        height: 100vh;
+    }
+
+    section.slider .img_holder {
+        margin-right: 30px;
+    }
+    
+    section.slider h1 {
+        font-size: 42px;
+    }
+
+    section.slider p {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    section.slider .container > div:nth-child(2) {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    section.slider h1 {
+        line-height: 60px;
+    }
+
+    section.slider .container > div:nth-child(2) {
+        width: 40%;
+    }
+}
+
+/* --------------------------------- */
+
+
+/* Features */
+
+section.features {
+    padding: 80px 25px;
+}
+
+section.features li {
+    padding: 30px 23px;
+    background: #faf9ff;
+    transition: ease-in-out 300ms;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+section.features li:hover {
+    background: white;
+    box-shadow: 0px 10px 20px 0px rgba(33,20,106,0.1)
+}
+
+section.features li .img_holder {
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+    color: #072B4C;
+}
+
+section.features li h2 {
+    color: #3a414e;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: "Rajdhani-Bold",sans-serif;
+}
+
+section.features li p {
+    color: #3a414e; 
+}
+
+section.features .features_holder:nth-child(2) {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+section.features .features_holder:nth-child(3) > .img_holder img{
+    max-height: 360px;
+    width: auto;
+}
+
+section.features .features_holder > .img_holder img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    section.features .features_holder {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section.features .features_holder:nth-child(2) {
+        margin-bottom: 80px;
+        flex-direction: unset;
+    }
+
+    section.features .features_holder > .img_holder img {
+        margin-bottom: 0;
+    }
+
+    section.features .heading {
+        max-width: 50%;
+        margin: 0 auto 90px auto;
+    }
+
+    section.features .features_holder ul {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    section.features .features_holder ul .img_holder {
+        margin-bottom: 20px;
+    }
+
+    section.features .features_holder ul li {
+        width: calc(50% - 58.5px);
+    }
+
+    section.features .features_holder ul li:nth-child(even) {
+        position: relative;
+        top: 30px;
+    }
+
+    section.features .features_holder > .img_holder {
+        width: calc(50% - 25px);
+    }
+}
+
+/* --------------------------------- */
+
+
+/* Features */
+
+section.solutions {
+    background: #faf9ff;
+}
+
+section.solutions .container {
+    padding: 80px 25px;
+}
+
+section.solutions .container .img_holder {
+    margin-bottom: 50px;
+}
+
+section.solutions .container img {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    section.solutions.img_right .container > div:first-child {
+        order: 2
+    }
+    section.solutions.img_right .container > div:last-child {
+        order: 1
+    }
+    section.solutions.img_left .container > div:first-child {
+        order: 1
+    }
+    section.solutions.img_left .container > div:last-child {
+        order: 2
+    }
+
+
+    section.solutions .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section.solutions .container .img_holder {
+        margin: 0;
+    }
+
+    section.solutions .container > div:first-child {
+        width: 45%;
+    }
+
+    section.solutions .container > div:last-child {
+        width: 40%;
+    }
+}
+/* --------------------------------- */
+
+/* Pricing */
+
+section.pricing .container {
+    padding: 80px 25px;
+    max-width: 1200px;
+    margin: auto;
+    color: #3a414e;
+}
+
+section.pricing .features_holder > ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+section.pricing .features_holder > ul > li {
+    width: 100%;
+    text-align: center;
+    background: #faf9ff;
+    transition: ease-in-out 300ms;
+    margin-bottom: 25px;
+}
+
+section.pricing .features_holder > ul > li:hover {
+    box-shadow: 0px 20px 25.5px 4.5px rgba(33,20,106,0.1);
+}
+
+section.pricing .features_holder .header {
+    padding: 40px 0;
+}
+
+section.pricing .features_holder .header h2{
+    font-size: 27px;
+    margin-bottom: 27px;
+}
+
+section.pricing .features_holder .header .price {
+    font-size: 40px;
+    font-family: "Radjhani-Bold";
+    color: #072B4C;
+}
+
+section.pricing .features_holder .header .price span {
+    font-size: 26px;
+}
+
+section.pricing .features_holder li > ul {
+    padding: 40px 0;
+    border-bottom: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+}
+
+section.pricing .features_holder li li {
+    padding: 10px 0;
+    font-family: "Regular";
+}
+
+section.pricing .features_holder li .img_holder {
+    margin-right: 5px;
+}
+
+section.pricing .features_holder .btn_holder {
+    padding: 40px 0;
+    font-size: 20px;
+}
+
+section.pricing .features_holder .btn_holder a{
+    border-color: #072B4C;
+    color: #072B4C;
+}
+
+section.pricing .features_holder .btn_style2:hover {
+    color: white;
+    background-color: #1783e9;
+    border-color: #1783e9;
+}
+
+
+@media only screen and (min-width: 768px) {
+    section.pricing .features_holder > ul > li {
+        width: calc((100% / 4) - 17px);
+        margin-bottom: 0;
+    }
+}
+
+/* --------------------------------- */
+
+/* Contact us */
+
+.contact {
+    background-color: #1890ff;
+    padding: 20px 20px;
+}
+
+
+.contact form {
+    font-family: "regular";
+    font-size: 18px;
+    max-width: 1000px;
+    background-color: white;
+    margin: 30px auto;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+.contact form input {
+    display: block;
+    margin-bottom: 25px;
+    resize: vertical;
+    font-size: 20px;
+    padding: 20px;
+    width: calc(100% - 40px);
+    background-color: #faf9ff;
+    border-radius: 5px;
+    border: solid 2px #ebebeb;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.contact form textarea {
+    display: block;
+    margin-bottom: 25px;
+    font-family: "regular";
+    font-size: 20px;
+    width: calc(100% - 40px);
+    height: 150px;
+    background-color: #faf9ff;
+    border-radius: 5px;
+    border: solid 2px #ebebeb;
+    padding: 20px;
+    resize: vertical;
+}
+
+.contact form > div:last-child {
+    text-align: center;
+}
+
+.contact form .btn_style2 {
+    display: inline-block;
+    border-color: #072B4C;
+}
+
+.contact form .btn_style2:hover {
+    border-color: #1890ff;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .contact .form-holder {
+        margin-top: 50px;
+    }
+
+}
+
+@media only screen and (min-width: 850px) {
+
+    .contact form {
+        padding: 40px;
+    }
+    
+
+    .contact .form-holder {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact form > div > div {
+        width: calc(50% - 12.5px);
+    }
+}
+
+/* ----------------------------------- */
+
+
+footer {
+    padding: 30px 25px;
+    background-color: #072B4C;
+    color: white;
+    text-align: center;
+    font-family: "Radjhani-Bold";
+}
